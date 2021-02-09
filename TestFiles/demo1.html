@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../JavaScript/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+        <li>test</li>
+    </ul>
+    <script type="text/javascript">
+
+        $('#list li').text('test JQuery');
+        function numbering(){
+            var i = 0;
+            while(i<1000){
+                document.write(i+"<br/>");
+                i+= 1;
+            }
+        }
+
+        //Object Create.
+        var ob = {'test':10, 'test1':5, 'koko':80};
+        // Other ways
+        var ob2 ={};
+        ob2['test1'] = 12;
+        // The other ways
+        var ob3 = new Object();
+        ob3['test1'] = 12;
+
+
+        document.write(ob['test']);
+        document.write(ob.koko + "<br/>");
+
+        for(key in ob){
+            document.write("key : " +key+" value : "+ ob[key]+"<br>");
+        }
+    </script>
+</body>
+</html>
