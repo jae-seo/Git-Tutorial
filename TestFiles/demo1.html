@@ -16,6 +16,38 @@
     </ul>
     <script type="text/javascript">
 
+        function test(title){
+            return{
+                get_title:function(){
+                    return title;
+                },
+                set_title : function(_title){
+                    title = _title
+                }
+            }
+        }
+        got  = test('func_test <br/>');
+
+        document.write(got.get_title());
+        got.set_title('sec_func <br/>');
+        document.write(got.get_title());
+
+        //closuer
+        var arr = [];
+        for (var i = 0; i<5; i++){
+            arr[i] = function(id){
+                return function(){
+                    return id;
+                }
+            }(i);
+        }
+
+        for(var index in arr){
+            console.log(arr[index]());
+        }
+
+
+        
         $('#list li').text('test JQuery');
         function numbering(){
             var i = 0;
@@ -41,6 +73,17 @@
         for(key in ob){
             document.write("key : " +key+" value : "+ ob[key]+"<br>");
         }
+
+        // Regualr Expression. var patter = /a/;
+        // var patter = new RegExp('a');
+        // pattern.exec('strings');
+        // 정규표현식은 url등 필요한 문자열을 추출할 떄 씀.
+
+        // var pattern = /a./;      .은 문자. 어떠한 문자이던지 하나.
+        // pattern.test('strings')  는 true or false를 리턴함.
+        // 문자열 메소드 실행
+        // String.match()       == RegExp.exec() 와 비슷함.
+
     </script>
 </body>
 </html>
