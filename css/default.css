@@ -44,6 +44,7 @@ body {
   width: 280px;
   border-color: #2ecc71;
   background: white;
+  color: black;
 }
 
 .box input[type="submit"] {
