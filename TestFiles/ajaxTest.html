@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>    <!--#은 북마크기능 그래서 #!을 사용하여 hash bang이라고 부름-->
+        <li><a href="#!demo1.html" onclick="fetchPage('demo1.html')">demo1</a></li>
+        <li><a href="#!css" onclick="fetchPage('css')">css</a></li>
+    </ol>
+    <article>
+
+    </article>
+
+    <script>
+        function fetchPage(name) {
+            fetch(name).then(function (response) {
+                response.text().then(function (text) {
+                    document.querySelector('article').innerHTML = text;
+                })
+            })
+        }
+
+        if(location.hash){
+            fetchPage(location.hash.substr(2));
+        }else{
+            fetchPage('welcome.html');
+        }
+        //hash bang은 잘 사용하지 않음. 대체로 'pjax' 를 사용
+    </script>
+</body>
+
+</html>
