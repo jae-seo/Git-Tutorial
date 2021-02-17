@@ -1,4 +1,3 @@
-alert("test");
 var player=document.getElementById("player");
 var block = document.getElementById("block");
 function jump(){
