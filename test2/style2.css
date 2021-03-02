@@ -24,7 +24,7 @@ body {
   line-height: 100px;
 
   transform-style: preserve-3d;
-  transition: 0.5s;
+  transition: 2s;
   cursor: pointer;
 }
 
